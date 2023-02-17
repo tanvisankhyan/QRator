@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRator</title>
+    
+</head>
+<body>
+     <div class="qr">
+        <h1> QRator</h1><img src="https://www.clipartmax.com/png/full/127-1270850_dr-heinz-doofenshmirtz.png" alt="alternatetext" width="100" height="100">
+   
+      
+    </div>
+    <form action="/" method="POST">
+        <input type="text" name="link"/>
+        <button type="submit">QR</button>
+    </form>
+    
+    {% if data %}
+    <div class="generated">
+        <img src="{{data}}" alt="" />
+        <p> Here You Go</p>
+
+    </div>
+    {% endif %}
+    
+</body>
+</html>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap');
+     *{
+        
+        padding:0;
+        box-sizing:border-box;
+        background-color: rgb(215, 187, 146);
+    }
+    html,
+    body{
+        text-align: center;
+        justify-content: center;
+        align-items:center;
+        font-family: 'Josefin Sans', sans-serif;
+        
+    }
+  
+  .qr{
+    margin-top: 50px;
+  }
+    form{
+        margin-top: -10px;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        gap:1rem;
+    }
+    form input{
+        font-size:1rem;
+        padding:0.5rem 1rem;
+        width:35%;
+        background:black;
+        color:rgb(138, 86, 10);
+        border:none;
+    }
+    form button{
+        font-size: 1rem;
+        background: rgb(109, 76, 0);
+        border:none;
+        color:rgb(231, 206, 171);
+        padding: 0.75rem 1.5rem;
+        cursor:pointer;
+        border-radius:0.5rem;
+    }
+    .generated{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: medium;
+        
+    }
+</style>
+    
